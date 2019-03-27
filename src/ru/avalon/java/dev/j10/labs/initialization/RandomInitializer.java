@@ -16,8 +16,8 @@ import ru.avalon.java.dev.j10.labs.Initializer;
  * инициализации.
  */
 public class RandomInitializer implements Initializer {
-    private int min;
-    private int max;
+    private int min;    //Минимальный предел диапазона
+    private int max;    //Максимальный предел диапазона
     /**
      * Выполняет инициализацию массива, значениями
      * последовательности случайных чисел.
@@ -33,6 +33,7 @@ public class RandomInitializer implements Initializer {
         } 
         System.out.println("Random array elements: " + Arrays.toString(array));
     }
+    //Конструктор
     public RandomInitializer(int min, int max) {
         this.min = min;
         this.max = max;

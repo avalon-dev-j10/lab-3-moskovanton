@@ -5,7 +5,10 @@ import ru.avalon.java.dev.j10.labs.initialization.*;
 import ru.avalon.java.dev.j10.labs.sort.*;
 
 public class Main {
-    
+    /**Метод, возвращающий сумму элементов массива
+     * 
+     * @param array массив
+     */
     public static void sumMas(int array[]) {
         int sum = 0;
         for (int i = 0; i < array.length; i++){
@@ -21,6 +24,14 @@ public class Main {
         sumMas(array);
         RandomInitializer random = new RandomInitializer(-50, 50);
         random.initialize(array);
+        BubbleSort bubble = new BubbleSort();
+        bubble.sort(array);
+        random.initialize(array);
+        SelectionSort selection = new SelectionSort();
+        selection.sort(array);
+        random.initialize(array);
+        ShellSort shell = new ShellSort();
+        shell.sort(array);
 	    /*
 	     * TODO(Студент): Выполнить действия над массивом чисел
 	     *

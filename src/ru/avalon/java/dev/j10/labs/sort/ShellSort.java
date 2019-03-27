@@ -1,5 +1,6 @@
 package ru.avalon.java.dev.j10.labs.sort;
 
+import java.util.Arrays;
 import ru.avalon.java.dev.j10.labs.Sort;
 
 /**
@@ -24,5 +25,23 @@ public class ShellSort implements Sort {
         /*
          * TODO(Студент): Реализовать метод sort класса ShellSort
          */
+        int d = array.length / 2;
+        while (d >= 1) {
+            for (int k = 0; k < d; k++) {
+                for (int i = k; i < array.length - 1; i = i + d) {
+                    for (int j = Math.min(i + d, array.length - 1); j - d >= 0; j = j - d) {
+                        if (array[j - d] > array[j]) {
+                            int temp = array[j];
+                            array[j] = array[j - d];
+                            array[j - d] = temp;
+                        } else {
+                            break;
+                        }
+                    }
+                }
+            }
+            d = d / 2;
+        }
+        System.out.println("Shell sort array elements: " + Arrays.toString(array)); 
     }
 }

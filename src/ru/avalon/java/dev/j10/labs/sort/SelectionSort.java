@@ -1,5 +1,6 @@
 package ru.avalon.java.dev.j10.labs.sort;
 
+import java.util.Arrays;
 import ru.avalon.java.dev.j10.labs.Sort;
 
 /**
@@ -21,5 +22,18 @@ public class SelectionSort implements Sort {
         /*
          * TODO(Студент): Реализовать метод sort класса SelectionSort
          */
+        for (int j = 0; j < array.length - 1; j++){
+            int least = j;
+            for (int i = j+1; i < array.length; i++){
+                if(array[i] < array[least]){
+                    least = i;
+                }
+            }
+            int temp = array[j];
+            array[j] = array[least];
+            array[least] = temp;
+        }
+        System.out.println("Selection sort array elements: " + Arrays.toString(array));
     }
 }
+
