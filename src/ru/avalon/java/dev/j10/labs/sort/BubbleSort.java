@@ -21,6 +21,12 @@ public class BubbleSort implements Sort {
         /*
          * TODO(Студент): Реализовать метод sort класса BubbleSort
          */
+        
+        /*  TODO (Проверка№1 ЛР№3)
+            - Перед обращением к массиву следует делать проверку на правильность массива,
+            если array = null, возникает ошибка!!!
+            - Исправить!
+        */
         int temp;
         for (int j = 0; j < array.length - 1; j++){
             for (int i = 0; i < array.length - j - 1; i++){

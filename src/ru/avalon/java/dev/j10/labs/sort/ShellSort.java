@@ -25,6 +25,12 @@ public class ShellSort implements Sort {
         /*
          * TODO(Студент): Реализовать метод sort класса ShellSort
          */
+        
+        /*  TODO (Проверка№1 ЛР№3)
+            - Перед обращением к массиву следует делать проверку на правильность массива,
+            если array = null, возникает ошибка!!!
+            - Исправить!
+        */
         int d = array.length / 2;
         while (d >= 1) {
             for (int k = 0; k < d; k++) {

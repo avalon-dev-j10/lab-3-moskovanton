@@ -4,7 +4,7 @@ import java.util.Arrays;
 import ru.avalon.java.dev.j10.labs.Initializer;
 
 /**
- * Класс, выполняющий инициализацию массива числе,
+ * Класс, выполняющий инициализацию массива чисел,
  * значениями последовательности Фибоначчи.
  *
  * <p>Чи́сла Фибона́ччи (иногда пишут Фибона́чи[1]) — элементы
@@ -32,6 +32,14 @@ public class FibonacciInitializer implements Initializer {
          * TODO(Студент): Реализовать метод initialize класса FibonacciInitializer
          */
         array[0] = 0;
+         
+        /*  TODO (Проверка№1 ЛР№3)
+            - Перед каждым обращением к элементу массива надо проверять есть ли такой индекс
+            length() > 1, если я в метод передам массив int[1] или array = null возникнет ошибка выполнения
+            - Исправить ошибку RunTime!!!!
+            - Добавить коментарии к полям и методам класса
+        */
+        
         array[1] = 1;
         for (int i = 2; i < array.length; i++){
             array[i] = array[i-1] + array[i-2]; 
