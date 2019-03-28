@@ -28,18 +28,23 @@ public class SelectionSort implements Sort {
             если array = null, возникает ошибка!!!
             - Исправить!
         */
-        for (int j = 0; j < array.length - 1; j++){
-            int least = j;
-            for (int i = j + 1; i < array.length; i++){
-                if(array[i] < array[least]){
-                    least = i;
+        if (array != null){                          // проверка корректности длины массива    
+            for (int j = 0; j < array.length - 1; j++){
+                int least = j;
+                for (int i = j + 1; i < array.length; i++){
+                    if(array[i] < array[least]){
+                        least = i;
+                    }
                 }
+                int temp = array[j];
+                array[j] = array[least];
+                array[least] = temp;
             }
-            int temp = array[j];
-            array[j] = array[least];
-            array[least] = temp;
+            System.out.println("Selection sort array elements: " + Arrays.toString(array));
         }
-        System.out.println("Selection sort array elements: " + Arrays.toString(array));
+        else {
+            System.out.println("Incorrect array");
+        }
     }
 }
 
