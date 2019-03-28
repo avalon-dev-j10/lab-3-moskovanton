@@ -31,19 +31,22 @@ public class FibonacciInitializer implements Initializer {
         /*
          * TODO(Студент): Реализовать метод initialize класса FibonacciInitializer
          */
-        array[0] = 0;
-         
+        if ((array != null) && (array.length > 2)){                          // проверка корректности длины массива
         /*  TODO (Проверка№1 ЛР№3)
             - Перед каждым обращением к элементу массива надо проверять есть ли такой индекс
             length() > 1, если я в метод передам массив int[1] или array = null возникнет ошибка выполнения
             - Исправить ошибку RunTime!!!!
             - Добавить коментарии к полям и методам класса
         */
-        
-        array[1] = 1;
-        for (int i = 2; i < array.length; i++){
-            array[i] = array[i-1] + array[i-2]; 
-        } 
-        System.out.println("Fibonacci array elements: " + Arrays.toString(array));
+            array[0] = 0;
+            array[1] = 1;
+            for (int i = 2; i < array.length; i++){     // каждое последующее число равно сумме двух предыдущих чисел
+                array[i] = array[i-1] + array[i-2]; 
+            } 
+            System.out.println("Fibonacci array elements: " + Arrays.toString(array));
+        }
+        else {
+            System.out.println("Incorrect array");
+        }
     }
 }
