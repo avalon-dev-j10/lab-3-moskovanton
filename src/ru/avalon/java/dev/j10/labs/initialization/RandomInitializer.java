@@ -28,10 +28,15 @@ public class RandomInitializer implements Initializer {
         /*
          * TODO(Студент): Реализовать метод initialize класса RandomInitializer
          */
-        for (int i = 0; i < array.length; i++){           
-            array[i] = ThreadLocalRandom.current().nextInt(min, max + 1);
-        } 
-        System.out.println("Random array elements: " + Arrays.toString(array));
+        if (array != null){                          // проверка корректности длины массива
+            for (int i = 0; i < array.length; i++){           
+                array[i] = ThreadLocalRandom.current().nextInt(min, max + 1);
+            } 
+            System.out.println("Random array elements: " + Arrays.toString(array));
+        }
+        else {
+            System.out.println("Incorrect array");
+        }
     }
     //Конструктор
     public RandomInitializer(int min, int max) {
