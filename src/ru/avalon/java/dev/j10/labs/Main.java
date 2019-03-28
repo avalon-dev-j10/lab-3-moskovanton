@@ -10,11 +10,16 @@ public class Main {
      * @param array массив
      */
     public static void sumMas(int array[]) {
-        int sum = 0;
-        for (int i = 0; i < array.length; i++){
-            sum += array[i];
-        } 
-        System.out.println("Sum of array elements: " + sum );
+        if (array != null){  
+            int sum = 0;
+            for (int i = 0; i < array.length; i++){
+                sum += array[i];
+            } 
+            System.out.println("Sum of array elements: " + sum );
+        }
+        else {
+            System.out.println("Incorrect array");
+        }
     }    
 
     public static void main(String[] args) {
